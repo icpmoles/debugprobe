@@ -16,5 +16,5 @@ jobs:
       - run: |
             mkdir build
             cd build
-            cmake .. -DPICO_SDK_FETCH_FROM_GIT
+            cmake .. -DPICO_SDK_FETCH_FROM_GIT=ON -DDEBUG_ON_PICO=ON
             make
