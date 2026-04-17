@@ -1,0 +1,20 @@
+name: Build firmware
+on: [push]
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v5
+        with:
+            submodules: true
+            
+      - run: |
+            wget https://raw.githubusercontent.com/raspberrypi/pico-setup/8375530fa701f1c8da86267ec9b5c3e8757dd9ed/pico_setup.sh
+            chmod +x pico_setup.sh
+            ./pico_setup.sh
+      - run: |
+            mkdir build
+            cd build
+            cmake ..
+            make
