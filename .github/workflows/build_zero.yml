@@ -9,12 +9,12 @@ jobs:
         with:
             submodules: true
             
-      - run: |
-            wget https://raw.githubusercontent.com/raspberrypi/pico-setup/8375530fa701f1c8da86267ec9b5c3e8757dd9ed/pico_setup.sh
-            chmod +x pico_setup.sh
-            ./pico_setup.sh
+      # - run: |
+      #       wget https://raw.githubusercontent.com/raspberrypi/pico-setup/8375530fa701f1c8da86267ec9b5c3e8757dd9ed/pico_setup.sh
+      #       chmod +x pico_setup.sh
+      #       ./pico_setup.sh
       - run: |
             mkdir build
             cd build
-            cmake ..
+            cmake .. -DPICO_SDK_FETCH_FROM_GIT
             make
