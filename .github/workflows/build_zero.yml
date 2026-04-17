@@ -19,3 +19,14 @@ jobs:
             cd build
             cmake .. -DPICO_SDK_FETCH_FROM_GIT=ON -DDEBUG_ON_PICO=ON
             make
+            ls
+
+        
+      - name: Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: |
+            debugprobe_on_pico.elf
+            debugprobe_on_pico.uf2
+
+
