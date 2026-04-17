@@ -9,7 +9,7 @@ jobs:
         with:
             submodules: true
       - name: Install Packages
-        run: sudo apt install  make crossbuild-essential-armhf
+        run: sudo apt install  cmake gcc-arm-none-eabi gcc g++ ninja-build
       # - run: |
       #       wget https://raw.githubusercontent.com/raspberrypi/pico-setup/8375530fa701f1c8da86267ec9b5c3e8757dd9ed/pico_setup.sh
       #       chmod +x pico_setup.sh
