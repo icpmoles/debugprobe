@@ -29,7 +29,7 @@ jobs:
         if: github.ref_type == 'tag'
         with:
           files: |
-            debugprobe_on_pico.elf
-            debugprobe_on_pico.uf2
+            build/debugprobe_on_pico.elf
+            build/debugprobe_on_pico.uf2
 
 
